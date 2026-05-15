@@ -1,0 +1,98 @@
+{
+    "collections": {
+      "autores": {
+        "source_table": "autores",
+        "mongo_collection": "authors",
+        "fields": {
+          "id_autor": "id",
+          "nombre": "name"
+        }
+      },
+      "categorias": {
+        "source_table": "categorias",
+        "mongo_collection": "categories",
+        "fields": {
+          "id_categoria": "id",
+          "nombre": "name"
+        }
+      },
+      "editoriales": {
+        "source_table": "editoriales",
+        "mongo_collection": "publishers",
+        "fields": {
+          "id_editorial": "id",
+          "nombre": "name"
+        }
+      },
+      "usuarios": {
+        "source_table": "usuarios",
+        "mongo_collection": "users",
+        "fields": {
+          "id_usuario": "id",
+          "nombre": "name",
+          "correo": "email"
+        }
+      },
+      "libros": {
+        "source_table": "libros",
+        "mongo_collection": "books",
+        "fields": {
+          "id_libro": "id",
+          "titulo": "title",
+          "fecha_publicacion": "publication_date",
+          "id_autor": "author_id",
+          "id_categoria": "category_id",
+          "id_editorial": "publisher_id"
+        }
+      },
+      "sedes": {
+        "source_table": "sedes",
+        "mongo_collection": "branches",
+        "fields": {
+          "id_sede": "id",
+          "nombre": "name",
+          "ubicacion": "location"
+        }
+      },
+      "inventario": {
+        "source_table": "inventario",
+        "mongo_collection": "inventory",
+        "fields": {
+          "id_inventario": "id",
+          "id_sede": "branch_id",
+          "id_libro": "book_id",
+          "cantidad_total": "total_quantity"
+        }
+      },
+      "prestamos": {
+        "source_table": "prestamos",
+        "mongo_collection": "loans",
+        "fields": {
+          "id_prestamo": "id",
+          "id_usuario": "user_id",
+          "fecha_salida": "loan_date",
+          "estado": "status"
+        }
+      },
+      "prestamo_detalle": {
+        "source_table": "prestamo_detalle",
+        "mongo_collection": "loan_details",
+        "fields": {
+          "id_detalle": "id",
+          "id_prestamo": "loan_id",
+          "id_libro": "book_id"
+        }
+      },
+      "resenas": {
+        "source_table": "resenas",
+        "mongo_collection": "reviews",
+        "fields": {
+          "id_resena": "id",
+          "id_usuario": "user_id",
+          "id_libro": "book_id",
+          "comentario": "comment",
+          "calificacion": "rating"
+        }
+      }
+    }
+  }

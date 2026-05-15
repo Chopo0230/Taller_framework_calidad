@@ -1,0 +1,6 @@
+{
+    "correo_debe_contener": "@",
+    "calificacion_min": 1,
+    "calificacion_max": 5,
+    "longitud_min_titulo": 3
+}
