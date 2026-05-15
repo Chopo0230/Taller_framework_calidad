@@ -1,1 +1,21 @@
 VALIDACION EXITOSA
+
+=======================================================
+  FASE D: REPORTE DE MIGRACIÓN A MONGODB
+  Fecha: 2026-05-14 20:50:43
+=======================================================
+  autores              | OK       | PG= 250 | MG= 250
+  categorias           | OK       | PG=   5 | MG=   5
+  editoriales          | OK       | PG=  50 | MG=  50
+  usuarios             | OK       | PG= 250 | MG= 250
+  libros               | OK       | PG= 250 | MG= 250
+  sedes                | OK       | PG=  20 | MG=  20
+  inventario           | OK       | PG= 250 | MG= 250
+  prestamos            | OK       | PG= 250 | MG= 250
+  prestamo_detalle     | OK       | PG= 250 | MG= 250
+  resenas              | OK       | PG= 250 | MG= 250
+-------------------------------------------------------
+  Total extraídos de PostgreSQL : 1825
+  Total insertados en MongoDB   : 1825
+  Registros con error           : 0
+=======================================================

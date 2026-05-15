@@ -1,12 +1,15 @@
 import json
+import os
 import datetime
 from pymongo import MongoClient
 from pymongo.errors import BulkWriteError
 from src.conexion_postgres import conectar_postgres
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def cargar_mapping():
-    with open("config/mapping_mongo.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(BASE_DIR, "config", "mapping_mongo.json"), "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -104,7 +107,7 @@ def generar_reporte_mongo(reporte: dict):
     print(contenido)
 
     # Agrega al mismo log que usa validator.py
-    with open("logs/reporte_calidad.log", "a", encoding="utf-8") as log:
+    with open(os.path.join(BASE_DIR, "logs", "reporte_calidad.log"), "a", encoding="utf-8") as log:
         log.write(contenido + "\n")
 
     print("\n[LOG] Reporte de migración agregado a logs/reporte_calidad.log")
